@@ -24,7 +24,7 @@
 p {
   font-family:Arial, Helvetica, sans-serif;
   position: absolute; /* Position the heading absolutely */
-  top: 50%; /* Center the heading vertically */
+  top: 30%; /* Center the heading vertically */
   left: 50%;
   transform: translate(-50%, -50%); /* Center the heading both vertically and horizontally */
   z-index: 1; /* Bring the heading to the front */
