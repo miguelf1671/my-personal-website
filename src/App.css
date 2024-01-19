@@ -46,7 +46,7 @@ body {
 
 .primary-navigation a {
   text-decoration: none;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .primary-navigation a > [aria-hidden="true"] {
@@ -83,10 +83,6 @@ body {
     display: none;
   }
 
-  /* .mySvg path {
-    stroke: #e26ee5;
-  } */
-
   .primary-navigation[data-visible="true"] {
     transform: translateX(30%);
     transition: transform 350ms ease-out;
@@ -110,6 +106,12 @@ body {
 /* This changes the attributes according to the size of the window you specify */
 @media (min-width: 35em) and (max-width: 55em) {
   .primary-navigation a > span[aria-hidden] {
+    display: none;
+  }
+}
+
+@media (min-width: 35em) and (max-width: 100em) {
+  .icons {
     display: none;
   }
 }
@@ -141,41 +143,56 @@ body {
 /* Home page css */
 
 .background-picture {
-  /* this is one way to get your background div to take up the whole window and be responsive  */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-image: url("./assets/cyberpunk.png");
-
   background-size: cover;
   background-position: center;
-
-  margin: 0;
-  padding: 0;
-
-  /* position: relative; */
+  filter: blur(1.5px);
+  z-index: -1;
 }
 
 .container {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(0.1rem);
-  z-index: 1; */
   font-family: sans-serif;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
-.home {
-  margin-left: 2rem;
+.description h1 {
+  font-family: "MyCustomFont", sans-serif;
+  background: linear-gradient(to right, #98e4ff, #7e30e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
-
-.home h1 {
-  color: yellow;
+.center-content {
+  text-align: center;
 }
 
 .App {
   text-align: center;
+}
+
+/* Projects section */
+#projects {
+  background-color: red;
 }
