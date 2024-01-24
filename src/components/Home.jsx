@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import myImage from "../assets/myself.png";
 
 function Home() {
   const gradientColor = (
@@ -193,12 +194,14 @@ function Home() {
       <div class="item item1">
         <h1>MIGUEL FLORES</h1>
         <h2>Front End</h2>
+        <h3>+ Full Stack</h3>
         {windowSvg}
       </div>
 
       <div class="item item2">
         {fadedTriangle}
         {citySvg}
+        <img src={myImage} alt="miguel flores" />
       </div>
       <div class="item item3"></div>
     </div>

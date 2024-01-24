@@ -130,11 +130,11 @@ function Nav() {
           data-visible={isVisible.toString()}
           class={`primary-navigation flex ${isVisible ? "visible" : "hidden"}`}
         >
-          <li>
+          {/* <li>
             <a href="https://www.google.com/">
               <span aria-hidden="true">00</span>About
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="https://www.google.com/">
               <span aria-hidden="true">01</span>Resume
