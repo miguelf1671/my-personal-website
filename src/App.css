@@ -4,6 +4,13 @@
     url("../fonts/ProcrastinatingPixie-WyVOO.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "SecondaryFont";
+
+  src: local("SecondaryFont"),
+    url("../fonts/ForesterRegular-gxra4.ttf") format("truetype");
+}
+
 html {
   font-size: 16px;
 }
@@ -142,50 +149,80 @@ body {
 
 /* Home page css */
 
-.background-picture {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background-picture::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("./assets/cyberpunk.png");
-  background-size: cover;
-  background-position: center;
-  filter: blur(1.5px);
-  z-index: -1;
-}
-
 .container {
   font-family: sans-serif;
   display: grid;
-  grid-template-columns: 2fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+
   z-index: 1;
-  width: 100vw;
-  height: 100vh;
 }
-.description {
-  display: flex;
+.item1 {
+  position: relative;
+  overflow: hidden;
   justify-content: center;
-  margin-bottom: 100px;
+  text-align: center;
+  background-image: url("./assets/cyberpunk.png");
+  background-size: cover;
+
+  background-position: 10rem;
+  background-attachment: fixed;
 }
 
-.description h1 {
+.item1::before {
+  content: "";
+  position: relative;
+
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -1;
+}
+
+.item1 h1 {
   font-family: "MyCustomFont", sans-serif;
   background: linear-gradient(to right, #98e4ff, #7e30e1);
   -webkit-background-clip: text;
   background-clip: text;
+
   color: transparent;
+  position: sticky;
+  font-size: 32px;
+  top: 33%;
+  z-index: 2;
 }
-.center-content {
-  text-align: center;
+
+.item1 h2 {
+  font-family: "SecondaryFont", sans-serif;
+  font-size: 25px;
+  color: white;
+  position: sticky;
+  top: 35.5%;
+  z-index: 3;
+}
+
+@media (min-width: 39em) {
+  .item1 h1 {
+    font-size: 60px;
+    top: 33%;
+  }
+}
+
+@media (min-width: 39em) {
+  .item1 h2 {
+    font-size: 55px;
+    top: 34.5%;
+  }
+}
+
+/* desktop svg width */
+#desktop {
+  width: 80%;
+  max-width: 600px;
+  backdrop-filter: blur(1px);
+  position: sticky;
+  bottom: 18%;
 }
 
 .App {
@@ -193,6 +230,23 @@ body {
 }
 
 /* Projects section */
-#projects {
-  background-color: red;
+.item2 {
+  background-color: black;
+  position: relative;
+}
+
+.faded-triangle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.city-svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.item3 {
+  background-color: black;
 }
