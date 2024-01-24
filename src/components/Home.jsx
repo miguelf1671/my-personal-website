@@ -201,7 +201,9 @@ function Home() {
       <div class="item item2">
         {fadedTriangle}
         {citySvg}
-        <img src={myImage} alt="miguel flores" />
+        <div id="home-image">
+          <img src={myImage} alt="miguel flores" />
+        </div>
       </div>
       <div class="item item3"></div>
     </div>

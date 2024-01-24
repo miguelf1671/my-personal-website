@@ -214,6 +214,25 @@ body {
   background-clip: text;
   color: transparent;
 }
+.item2 {
+  background-color: black;
+  position: relative;
+}
+
+.item2 img {
+  width: 50%;
+}
+
+#home-image {
+  text-align: center;
+  margin-top: 90px;
+}
+
+@media (max-width: 39em) {
+  #home-image {
+    margin-top: 60px;
+  }
+}
 
 @media (min-width: 39em) {
   .item1 h1 {
@@ -250,10 +269,6 @@ body {
 }
 
 /* Projects section */
-.item2 {
-  background-color: black;
-  position: relative;
-}
 
 .faded-triangle {
   position: absolute;
