@@ -153,7 +153,7 @@ body {
   font-family: sans-serif;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1.5fr;
 
   z-index: 1;
 }
@@ -221,16 +221,55 @@ body {
 
 .item2 img {
   width: 50%;
+  max-width: 300px;
 }
 
-#home-image {
+#about-section {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 120px;
+}
+@media (min-width: 55em) {
+  #about-section {
+    margin-top: 200px;
+  }
 }
 
 @media (max-width: 39em) {
-  #home-image {
-    margin-top: 60px;
+  #about-section {
+    margin-top: 80px;
+  }
+}
+
+#about-section h1 {
+  font-family: "MyCustomFont";
+  background: linear-gradient(to right, #98e4ff, #7e30e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* color: white; */
+}
+
+#about-section-paragraph p {
+  padding: 40px;
+  flex: 2;
+  /* color: white; */
+  text-indent: 1em;
+  text-align: left;
+  line-height: 2;
+}
+
+@media (min-width: 23em) {
+  #about-section-paragraph {
+    padding-bottom: 100px;
+  }
+}
+
+@media (min-width: 50em) {
+  #about-section-paragraph p {
+    padding-left: 18%;
+    padding-right: 18%;
+
+    font-size: 20px;
   }
 }
 
@@ -279,6 +318,7 @@ body {
 .city-svg {
   position: absolute;
   bottom: 0;
+
   width: 100%;
 }
 
