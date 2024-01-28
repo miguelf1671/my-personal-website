@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import {
-  BurgerSvg,
-  CloseMenuIcon,
-  LinkedinIcon,
-  GithubIcon,
-} from "../svg/Icons";
+import { LinkedinIcon, GithubIcon } from "../svg/Icons";
+import { BurgerSvg, CloseMenuIcon } from "../svg/NavIcons";
+
 import "../App.css";
 
 function Nav() {
@@ -19,17 +16,18 @@ function Nav() {
       <div>
         <h1 class="logo">MF</h1>
       </div>
+      <div class="menu-1">
+        <button
+          class="menu-button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          onClick={handleToggle}
+        >
+          {isVisible ? CloseMenuIcon() : BurgerSvg()}
 
-      <button
-        class="menu-button"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-        onClick={handleToggle}
-      >
-        {isVisible ? CloseMenuIcon() : BurgerSvg()}
-
-        <span class="sr-only">Menu</span>
-      </button>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
 
       <nav>
         <ul
@@ -47,14 +45,14 @@ function Nav() {
               <span aria-hidden="true">01</span>Resume
             </a>
           </li>
-          <li>
-            <a class="icons" href="">
+          <li class="icons">
+            <a class="nav-icon" href="">
               <span aria-hidden="true"></span>
               {LinkedinIcon()}
             </a>
           </li>
-          <li>
-            <a class="icons" href="">
+          <li class="icons">
+            <a class="nav-icon" href="">
               <span aria-hidden="true"></span>
               {GithubIcon()}
             </a>
