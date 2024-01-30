@@ -48,7 +48,7 @@ function Nav() {
           <li class="icons">
             <a
               class="nav-icon"
-              href="www.linkedin.com/in/miguel-flores-ramirez-4405892a1"
+              href="https://www.linkedin.com/in/miguel-flores-ramirez-4405892a1"
             >
               <span aria-hidden="true"></span>
               {LinkedinIcon()}

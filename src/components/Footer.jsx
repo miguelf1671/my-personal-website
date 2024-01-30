@@ -10,7 +10,7 @@ function Footer() {
           <h2>Follow Here</h2>
         </div>
         <div class="social-icons">
-          <a href="www.linkedin.com/in/miguel-flores-ramirez-4405892a1">
+          <a href="https://www.linkedin.com/in/miguel-flores-ramirez-4405892a1">
             {LinkedinIcon()}
           </a>
           <a href="https://github.com/miguelf1671">{GithubIcon()}</a>
