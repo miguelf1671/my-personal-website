@@ -1,12 +1,7 @@
 import React from "react";
 import "../App.css";
 import myImage from "../assets/myself.png";
-import {
-  DesktopIcon,
-  FadedTriangle,
-  CitySvg,
-  LinkedinIcon,
-} from "../svg/Icons";
+import { DesktopIcon, FadedTriangle, CitySvg } from "../svg/Icons";
 
 function Home() {
   return (
