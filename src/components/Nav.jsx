@@ -41,7 +41,7 @@ function Nav() {
             </a>
           </li> */}
           <li>
-            <a href="https://www.google.com/">
+            <a href="https://www.canva.com/design/DAF1IvDn5zw/M9t8lnuMVr0nr26HbNHpIQ/view?utm_content=DAF1IvDn5zw&utm_campaign=designshare&utm_medium=link&utm_source=editor">
               <span aria-hidden="true">01</span>Resume
             </a>
           </li>
